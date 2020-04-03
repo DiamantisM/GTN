@@ -1,1 +1,1 @@
-* just guess the number and win :P *
+* just guess the number and win :P 
