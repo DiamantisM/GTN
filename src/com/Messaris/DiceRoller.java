@@ -4,17 +4,19 @@ import java.util.Random;
 
 public class DiceRoller {
 
-    public int sixDice() {
-        Random random = new Random();
-        int uber = random.nextInt(6);
-        return uber+1;
+    private static final int DIX_SIX_SIDED = 6;
+    private static final int DIX_TWENTY_SIDED = 20;
 
-
+    public int getSixSidedDieRoll() {
+        return getRandomNumber(DIX_SIX_SIDED) + 1;
     }
 
-    public int twentyDice(){
-        Random random = new Random();
-        int uber = random.nextInt(20);
-        return uber+1;
+    public int getTwentySidedDieRoll() {
+        return getRandomNumber(DIX_TWENTY_SIDED) + 1;
     }
+
+    private int getRandomNumber(int max) {
+        return new Random().nextInt(max);
+    }
+
 }
