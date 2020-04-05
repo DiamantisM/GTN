@@ -8,7 +8,6 @@ public class NumberFactory {
 
         int a = diceRoller.getSixSidedDieRoll();
         int b = diceRoller.getTwentySidedDieRoll();
-
         return a * b;
     }
 }
