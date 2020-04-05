@@ -7,7 +7,7 @@ public class UserInputValidator {
     boolean isNumber;
     Scanner scan = new Scanner(System.in);
 
-    public int isValidNumber() {
+    public int isNumber() {
 
         do {
             System.out.print("Enter a Number 1-120:  ");

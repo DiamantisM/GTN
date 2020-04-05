@@ -8,7 +8,7 @@ public class Main {
         int a = new NumberFactory().getRandomNumber();
 
         String quote;
-        int b = new UserInputValidator().isValidNumber();
+        int b = new UserInputValidator().isNumber();
 
         if (a == b) {
             quote = new QuoteGenerator().getOmg();
