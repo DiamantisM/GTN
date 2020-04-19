@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Validator {
 
-    public boolean oneToOneHandredTwenty(int x) {
+    public boolean oneToOneHundredTwenty(int x) {
         boolean isValid;
         isValid = x > 0 && x < 121;
         return isValid;

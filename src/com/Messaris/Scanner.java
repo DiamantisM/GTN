@@ -12,9 +12,9 @@ public class Scanner {
             if (scan.hasNextInt()) {
                 isNumber = new Validator().isNumber(scan);
                 c = scan.nextInt();
-                isValidNumber = new Validator().oneToOneHandredTwenty(c);
+                isValidNumber = new Validator().oneToOneHundredTwenty(c);
             } else {
-                System.out.println("Invalid entry !! ");
+                System.out.println("I said Number...");
                 isValidNumber = false;
                 isNumber = false;
                 scan.next();
