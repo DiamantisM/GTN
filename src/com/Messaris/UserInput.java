@@ -13,7 +13,7 @@ public class UserInput {
         do {
             System.out.print("Enter a Number 1-120: ");
             if (scan.hasNextInt()) {
-                isNumber = validator.oneToOneHundredTwenty(c);
+                isNumber = validator.isNumber(scan);
                 c = scan.nextInt();
                 isValidNumber = validator.oneToOneHundredTwenty(c);
             } else {
