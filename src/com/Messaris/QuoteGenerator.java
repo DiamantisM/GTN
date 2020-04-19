@@ -6,19 +6,19 @@ package com.Messaris;
 public class QuoteGenerator {
 
     public String getLol() {
-        return "lol";
+        return "lol ";
     }
 
     public String getRofl() {
-        return "ROFL";
+        return "ROFL ";
     }
 
     public String getOmg() {
-        return "OMG YOU WON";
+        return "OMG YOU WON it was: ";
     }
 
     public String getNope() {
-        return "Nope ";
+        return "Nope it was: ";
     }
 
 }

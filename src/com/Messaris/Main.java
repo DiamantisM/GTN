@@ -4,17 +4,9 @@ package com.Messaris;
 public class Main {
 
     public static void main(String[] args) {
+        String a = new IdontKnowHowToNameThisClass().returnQuote();
+        System.out.println(a);
 
-        int a = new NumberFactory().getRandomNumber();
 
-        String quote;
-        int b = new UserInputValidator().isNumber();
-
-        if (a == b) {
-            quote = new QuoteGenerator().getOmg();
-        } else {
-            quote = new QuoteGenerator().getNope();
-        }
-        System.out.println(quote + "it was " + a);
     }
 }
