@@ -5,20 +5,28 @@ package com.Messaris;
  */
 public class QuoteGenerator {
 
-    private String getLol() {
-        return "lol not so close,it was: ";
+    private String getLol(String targetNumber) {
+        String message = "lol not so close,it was: %s!";
+        message = String.format(message, targetNumber);
+        return message;
     }
 
-    private String getRofl() {
-        return "ROFL you Suck at guessing,it was: ";
+    private String getRofl(String targetNumber) {
+        String message = "ROFL you Suck at guessing,it was: %s";
+        message = String.format(message, targetNumber);
+        return message;
     }
 
-    private String getOmg() {
-        return "OMG YOU WON it was: ";
+    private String getOmg(String targetNumber) {
+        String message = "OMG YOU WON it was: %s";
+        message = String.format(message, targetNumber);
+        return message;
     }
 
-    private String getClose() {
-        return "That was close,it was: ";
+    private String getClose(String targetNumber) {
+        String message = "That was Close,it was: %s";
+        message = String.format(message, targetNumber);
+        return message;
     }
 
     public String returnQuote() {
@@ -30,15 +38,15 @@ public class QuoteGenerator {
         int c = Math.abs(a - b);
         String z;
         if (c == 0) {
-            z = quoteGenerator.getOmg();
+            z = quoteGenerator.getOmg(String.valueOf(a));
         } else if (c > 0 && c < 11) {
-            z = quoteGenerator.getClose();
+            z = quoteGenerator.getClose(String.valueOf(a));
         } else if (c > 10 && c < 80) {
-            z = quoteGenerator.getLol();
+            z = quoteGenerator.getLol(String.valueOf(a));
         } else {
-            z = quoteGenerator.getRofl();
+            z = quoteGenerator.getRofl(String.valueOf(a));
         }
-        return z + a;
+        return z;
 
 
     }
