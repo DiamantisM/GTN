@@ -5,6 +5,18 @@ package com.Messaris;
  */
 public class QuoteGenerator {
 
+    private String getHot() {
+        return "HOT HOT HOT !!!";
+    }
+
+    private String getCold() {
+        return "Brrrrr COLD !!";
+    }
+
+    private String getWin() {
+        return "YES you won !!!!!!!!!!";
+    }
+
     private String getLol(String targetNumber) {
         String message = "lol not so close,it was: %s!";
         message = String.format(message, targetNumber);
@@ -29,7 +41,25 @@ public class QuoteGenerator {
         return message;
     }
 
-    public String returnQuote() {
+
+    public String returnQuoteOnce(int a) {
+        UserInput userInput = new UserInput();
+        QuoteGenerator quoteGenerator = new QuoteGenerator();
+        int b = userInput.userInputNumber();
+        int c = Math.abs(a - b);
+        String z;
+        if (c == 0) {
+            z = quoteGenerator.getWin();
+        } else if (c > 0 && c < 10) {
+            z = quoteGenerator.getHot();
+        } else {
+            z = quoteGenerator.getCold();
+        }
+        return z;
+
+    }
+
+    public String returnQuoteEveryTime() {
         NumberFactory numberFactory = new NumberFactory();
         UserInput userInput = new UserInput();
         QuoteGenerator quoteGenerator = new QuoteGenerator();
@@ -48,7 +78,5 @@ public class QuoteGenerator {
         }
         return z;
 
-
     }
-
 }
