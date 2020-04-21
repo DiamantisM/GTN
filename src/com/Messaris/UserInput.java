@@ -1,18 +1,21 @@
 package com.Messaris;
 
-public class Scanner {
+import java.util.Scanner;
 
-    public int UserInputNumber() {
+public class UserInput {
+
+    public int userInputNumber() {
         int c = 0;
+        Scanner scan = new Scanner(System.in);
+        Validator validator = new Validator();
         boolean isNumber;
         boolean isValidNumber;
-        java.util.Scanner scan = new java.util.Scanner(System.in);
         do {
             System.out.print("Enter a Number 1-120: ");
             if (scan.hasNextInt()) {
-                isNumber = new Validator().isNumber(scan);
+                isNumber = validator.isNumber(scan);
                 c = scan.nextInt();
-                isValidNumber = new Validator().oneToOneHundredTwenty(c);
+                isValidNumber = validator.oneToOneHundredTwenty(c);
             } else {
                 System.out.println("I said Number...");
                 isValidNumber = false;
