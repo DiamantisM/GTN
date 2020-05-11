@@ -15,5 +15,11 @@ public class Validator {
         isValid = x.hasNextInt();
         return isValid;
     }
+
+    public boolean isOneOrTwo(int x) {
+        boolean isValid;
+        isValid = x == 1 || x == 2;
+        return isValid;
+    }
 }
 
